@@ -13,6 +13,6 @@ body{
     font-family: 'Tajawal', sans-serif;
 }
 
-div{
-    color: blue;
+.dropdown-menu .dropdown-item{
+    text-align: right;
 }
