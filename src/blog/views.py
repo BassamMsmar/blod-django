@@ -17,6 +17,7 @@ def about_us(request):
 
 
 def post_detail(request, post_id):
+    
     post = get_object_or_404(Post, pk=post_id)
     comments = post.comments.filter(active=True)
     
@@ -26,7 +27,6 @@ def post_detail(request, post_id):
             new_comment = comment_form.save(commit=False)
             new_comment.post = post
             new_comment.save()
-            # comment_form = NewComment()
             return redirect('detail', post_id)
     else:
         comment_form = NewComment()
