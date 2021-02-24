@@ -50,15 +50,31 @@
                             <a class="nav-link" href="{% url 'about_us' %}">من نحن </a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#"> تسجيل دخول </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#"> تسجيل  </a>
-                        </li>
-                    </ul>
 
+                    
+                    {% if user.is_authenticated  %}
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#"> تدوينة جديدة  </a>   
+                            </li>                        
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{% url 'profile' %}"> الملف الشخصي </a>   
+                            </li>                        
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{% url 'logout' %}"> تسجيل خروج </a>
+                            </li>
+                        </ul>
+                    {% else %}
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{% url 'login' %}"> تسجيل دخول </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{% url 'signup'%}"> تسجيل  </a>
+                            </li>
+                        </ul>
+                    {% endif %}
+                   
                 </div>
             </div>
         </nav>

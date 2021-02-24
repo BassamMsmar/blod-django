@@ -1,0 +1,57 @@
+
+{% extends  'blog/base.html' %}
+{% block content %}
+{% load static %}
+
+  
+<div class="border p-4 mb-5">
+    <div class="row">
+        <div class="col-md-3 text-center">
+            <img src="{% static 'blog/images/profile.png' %}" alt=" شعار المدونة" width="100px">
+            <a class="btn btn-secondary mt-3" href=""> <i class="fas fa-pen fa-xs "></i>  تعديل </a> 
+        </div>
+        <div class="col-md-9 ">
+            <h2 class="mb-4" >اسم المستخدم </h2>
+            <p class="font-weight-bold">الأسم : <span class="font-weight-normal" >Bassam Msmar</span></p>
+            <p class="font-weight-bold">البريد الالكتروني  : <span class="font-weight-normal" >Bassam Msmar</span></p>
+        </div>
+    </div>
+    
+</div>
+
+
+<div class="row">
+    <div class="col-md">
+        <h3 class="border-bottom pb-3 mb-3"> عدد التدوينات</h3>
+        <h4 class=" bg-secondary text-center p-3 text-light">
+            152
+        </h4>
+        <h3 class="border-bottom mt-3 pb-2">تدويناتي</h3>
+        <ul class="p-2">
+            <a class="text-dark" href="#">عنوان المدونة الأولى </a>
+        </ul>
+        <ul class="p-2">
+            <a class="text-dark" href="#">عنوان المدونة الأولى </a>
+        </ul>
+        <ul class="p-2">
+            <a class="text-dark" href="#">عنوان المدونة الأولى </a>
+        </ul>
+        <ul class="p-2">
+            <a class="text-dark" href="#">عنوان المدونة الأولى </a>
+        </ul>
+        <ul class="p-2">
+            <a class="text-dark" href="#">عنوان المدونة الأولى </a>
+        </ul>
+        <ul class="p-2">
+            <a class="text-dark" href="#">عنوان المدونة الأولى </a>
+        </ul>
+    </div>
+</div>
+
+<div class="border-top pt-3 mt-3 text-center">
+    <a class="btn btn-secondary  bg-secondary" href="#"> السابق</a>
+    <span class="pr-4 pl-4 "> صفحة 15 من 22 </span>
+    <a class="btn btn-secondary  bg-secondary" href="#"> التالي</a>
+</div>
+
+{% endblock content %} 
