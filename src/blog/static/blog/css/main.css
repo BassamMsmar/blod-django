@@ -53,3 +53,7 @@ body{
 }
 
 /* end comment */
+
+.btn-editing{
+    float: left;
+}
