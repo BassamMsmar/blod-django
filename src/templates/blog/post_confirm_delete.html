@@ -9,10 +9,6 @@
         {% csrf_token %}
         <a  class="btn btn-secondary mt-4 " href="{% url 'detail' object.id %}">تراجع </a>
         <input class="btn btn-danger mt-4 back-btn" type="submit" value="حذف">
-        
     </form>
-    
 </div>
-
-
 {% endblock content %} 
